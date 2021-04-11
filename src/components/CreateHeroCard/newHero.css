@@ -1,0 +1,14 @@
+.hero {
+    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.avatar {
+    height: auto;
+    width: 300px;
+    max-width: 400px;
+}
+.avatar img {
+    display: block;
+    width: 100%;
+}

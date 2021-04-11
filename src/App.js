@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import CreateCard from "./components/CreateCard/CreateCard";
+import HeroCard from "./components/HeroCard/HeroCard";
+import Header from "./components/Header/Header";
+import CreateNewHero from "./components/CreateNewHero/CreateNewHero";
+
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Header />
+            <div className="wrapper">
+                <Switch>
+                    <Route exact path="/" component={CreateCard} />
+                    <Route path="/hero/:id" component={HeroCard} />
+                    <Route path="/create" component={CreateNewHero} />
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

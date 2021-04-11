@@ -1,0 +1,37 @@
+.card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding-bottom: 12px;
+}
+.MuiPagination-ul li:first-child,
+li:last-child {
+    display: none;
+}
+.nav ul {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gender,
+.status-form {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gender p,
+.status-form p {
+    color: blueviolet;
+    padding-right: 5px;
+}
+.gender input,
+.status-form input {
+    margin-right: 10px;
+}
+.status-form {
+    margin: 15px 0;
+    border: 1px solid gray;
+}
